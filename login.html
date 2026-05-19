@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Meu Site</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Área do Formulário de Login Centralizado -->
+    <main class="conteudo">
+        <div class="login-card">
+            <h2>Área de Login</h2>
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" placeholder="Digite seu e-mail" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" placeholder="Digite sua senha" required>
+                </div>
+
+                <button type="submit" class="btn-login">Entrar</button>
+            </form>
+            <p id="mensagem" class="mensagem"></p>
+            
+            <!-- Link para voltar caso o usuário desista -->
+            <p style="text-align: center; margin-top: 15px;">
+                <a href="index.html" style="color: #00adb5; text-decoration: none;">Voltar para o Início</a>
+            </p>
+        </div>
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

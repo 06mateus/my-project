@@ -1,0 +1,191 @@
+/* ==========================================================================
+   1. VARIÁVEIS DE CORES (SISTEMA DE TEMAS)
+   ========================================================================== */
+
+/* Definição das cores padrão (Modo Claro) */
+:root {
+    --bg-principal: #f4f7f6;
+    --bg-card: #ffffff;
+    --texto-principal: #333333;
+    --texto-secundario: #666666;
+    --borda: #cccccc;
+    --cor-destaque: #00adb5;
+    --cor-destaque-hover: #008c92;
+}
+
+/* Definição das cores quando o Modo Escuro estiver ativo */
+[data-theme="dark"] {
+    --bg-principal: #121212;
+    --bg-card: #1e1e1e;
+    --texto-principal: #ffffff;
+    --texto-secundario: #aaaaaa;
+    --borda: #444444;
+}
+
+/* ==========================================================================
+   2. RESET E CONFIGURAÇÕES GERAIS
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Transição suave de fundo e texto para o site todo */
+body {
+    background-color: var(--bg-principal);
+    color: var(--texto-principal);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* ==========================================================================
+   3. BARRA DE NAVEGAÇÃO (HEADER & MENU)
+   ========================================================================== */
+header {
+    background-color: #333; /* Mantém a barra escura em ambos os modos para contraste */
+    padding: 15px 30px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Separa o logo dos links */
+    align-items: center;
+}
+
+.logo {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none; /* Remove as bolinhas da lista */
+    display: flex;    /* Alinha os itens lado a lado na horizontal */
+    align-items: center;
+    gap: 20px;        /* Espaçamento entre os links */
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none; /* Remove o sublinhado padrão */
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--cor-destaque); /* Usa o tom azul claro no hover */
+}
+
+/* Destaque especial para o botão de Login no menu */
+.nav-links .btn-menu-login {
+    background-color: var(--cor-destaque);
+    padding: 6px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-links .btn-menu-login:hover {
+    background-color: var(--cor-destaque-hover);
+    color: #fff;
+}
+
+/* ==========================================================================
+   4. CONTEÚDO DAS PÁGINAS (HOME & LOGIN)
+   ========================================================================== */
+
+/* Estilo para o texto da Página Inicial */
+.conteudo-inicial {
+    padding: 50px;
+    text-align: center;
+    background-color: var(--bg-principal);
+    color: var(--texto-principal);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Container que centraliza o card na Tela de Login */
+.conteudo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh; /* Ocupa a maior parte da altura da tela */
+    background-color: var(--bg-principal);
+    color: var(--texto-principal);
+    padding: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* ==========================================================================
+   5. CARTÃO DE LOGIN E FORMULÁRIO
+   ========================================================================== */
+.login-card {
+    background-color: var(--bg-card);
+    color: var(--texto-principal);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Sombra para dar profundidade */
+    width: 100%;
+    max-width: 400px; /* Largura máxima do card */
+    text-align: left;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.login-card h2 {
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--texto-secundario);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--borda);
+    background-color: var(--bg-card);
+    color: var(--texto-principal);
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s, background-color 0.3s, color 0.3s;
+}
+
+/* Efeito quando o usuário clica para digitar no campo */
+.input-group input:focus {
+    border-color: var(--cor-destaque);
+}
+
+/* Botão de Enviar do Formulário */
+.btn-login {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--cor-destaque);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-login:hover {
+    background-color: var(--cor-destaque-hover);
+}
+
+/* Mensagens de feedback do JavaScript (Sucesso ou Erro) */
+.mensagem {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+}
